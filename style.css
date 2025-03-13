@@ -131,12 +131,13 @@ ul {
     color: var(--color-text);
     font-family: "Inter", sans-serif;
     font-size: 18px;
+    font-weight: bold;
     margin: 20px 0;
 }
 
 .result-list {
     margin-top: 15px;
-    color: #05DF05;
+    color: #931313;
     font-size: 22px;
     font-weight: bold;
     text-align: center;
