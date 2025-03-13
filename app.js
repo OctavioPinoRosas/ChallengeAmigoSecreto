@@ -36,7 +36,7 @@ function sortearAmigo(){
     //Si hay dos o mas amigos en la lista se hace el sorteo
     if (listaAmigos.length > 1){
         resultado = listaAmigos[Math.floor(Math.random()*listaAmigos.length)];
-        asignarTextoElemento('ul',`El amigo secreto es: ${resultado}`);
+        asignarTextoElemento('#resultado',`El amigo secreto es: ${resultado}`);
     } else if(listaAmigos.length > 0 ){
         //Si hay menos de dos nombres de amigos en la lista no se puede realizar el sorteo
         alert("Debe de haber al menos dos nombres de amigos para poder realizarse el sorteo")
