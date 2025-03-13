@@ -4,8 +4,10 @@ let nuevoAmigo = "";
 let resultado = 1;
 
 function agregarAmigo(){
+    let inputAmigo = document.getElementById('amigo');
+    let listaHTML = document.getElementById('listaAmigos');
     //Evitar que se agregue un campo vacio
-    if (document.getElementById('amigo').value.trim() === ""){
+    if (inputAmigo.value.trim() === ""){
         alert("No puedes dejar el campo vacio. Intenta de nuevo");
         limpiarCaja();
     } else{
@@ -17,7 +19,13 @@ function agregarAmigo(){
         } else{
             //Añade el nuevo nombre del amigo al final del array listaAmigos
             listaAmigos.push(nuevoAmigo);
-            asignarTextoElemento('ul',`Lista de amigos: ${listaAmigos}`);
+
+            listaHTML.innerHTML = "";
+            for (let amigo of listaAmigos) {
+                let nuevoElemento = document.createElement("li");
+                nuevoElemento.textContent = amigo;
+                listaHTML.appendChild(nuevoElemento);
+            }
             limpiarCaja();
         }
     }
