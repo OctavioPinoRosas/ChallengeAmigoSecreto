@@ -35,6 +35,13 @@ function mostrarListaAmigos(){
     }
 }
 
+function reiniciar(){
+    listaAmigos = [];
+    resultado = 1;
+    mostrarListaAmigos();
+    asignarTextoElemento('#resultado',"");
+}
+
 function sortearAmigo(){
     //Si hay dos o mas amigos en la lista se hace el sorteo
     if (listaAmigos.length > 1){
